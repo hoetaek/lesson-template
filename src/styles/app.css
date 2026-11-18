@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --color-ink: #243447;
+  --color-navy: #19324d;
+  --color-teal: #128277;
+  --color-cobalt: #3267d6;
+  --color-coral: #e86a5a;
+  --color-amber: #a65e15;
+  --color-bg: #f6f8fb;
+  --color-surface: #fff;
+  --color-band: #edf3fa;
+  --color-source: #f0f8f6;
+  --color-line: #d4dee9;
+  --color-muted: #627386;
+  --color-success: #147a54;
+  --color-danger: #b94b3c;
+  --color-accent: #2f5bd3;
+  --color-accent-soft: #e6ecfb;
+  --color-accent-hover: #d8e2fa;
+  --color-accent-wash: #eef2fb;
+  --color-heading: #16324f;
+  --color-surface-think: #f6f8fc;
+  --color-surface-quiet: #f3f5f9;
+  --color-line-soft: #e3e8ef;
+  --color-switch-off: #c9cfd8;
+  --color-source-line: #cfe5e0;
+  --color-source-line-strong: #8fcbbe;
+  --color-source-soft: #eaf3f1;
+  --color-amber-line: #e4cfac;
+  --color-amber-soft: #fdf9f2;
+  --color-amber-wash: #fdf7ee;
+  --color-amber-tint: #fdf3e4;
+  --color-cobalt-line: #bed0f0;
+  --color-cobalt-soft: #e8effc;
+  --color-cobalt-wash: #fbfcff;
+  --color-cobalt-strong: #2455ba;
+  --color-danger-line: #efc4bd;
+  --color-danger-soft: #fcefec;
+  --color-danger-wash: #fdf6f4;
+  --color-success-line: #b6dcc9;
+  --color-success-soft: #f2faf6;
+  --color-violet: #5b46a8;
+  --color-violet-line: #d6cdee;
+  --color-violet-soft: #f0edfa;
+  --color-navy-strong: #0f2439;
+  --color-line-strong: #a9b8c7;
+  --color-placeholder: #98a3b2;
+  --color-text-on-dark: #fff;
+  --color-editor-active-line: #f4f8fe;
+  --color-editor-selection: #cfe0f7;
+  --color-code-builtin: #7f0055;
+  --color-video-bg: #000;
+}
+
+@layer base {
+  body {
+    @apply m-0 bg-surface font-sans text-base leading-relaxed text-ink;
+    word-break: keep-all;
+  }
+  button,
+  a,
+  input,
+  select,
+  summary {
+    @apply outline-offset-4 focus-visible:outline-2 focus-visible:outline-accent;
+  }
+  button,
+  select,
+  summary {
+    @apply cursor-pointer;
+  }
+  button:disabled {
+    @apply cursor-default opacity-40;
+  }
+  input {
+    @apply accent-accent;
+  }
+  h1,
+  h2,
+  h3,
+  strong {
+    @apply text-navy;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
+  a {
+    @apply text-accent underline-offset-4;
+  }
+  code {
+    @apply font-mono;
+    overflow-wrap: anywhere;
+  }
+  p + p {
+    @apply mt-3;
+  }
+  select {
+    @apply rounded-lg border border-line bg-surface px-3 py-2 text-navy;
+  }
+  dialog::backdrop {
+    background: #19324d66;
+  }
+  [hidden] {
+    display: none !important;
+  }
+}
+
+/* These variants use the canvas width rather than the browser width. */
+@custom-variant canvas (&:where([data-canvas="true"], [data-canvas="true"] *));
+@custom-variant flowing (&:where([data-canvas="false"], [data-canvas="false"] *));
+
+@custom-variant presenting (&:where([data-view="present"] *));

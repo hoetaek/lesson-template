@@ -1,4 +1,3 @@
-// 기존 수업 앱의 순수 시간 계산을 재사용한다. 출처와 변경 범위는 docs/provenance.md.
 export function advance(cur: number, elapsed: number, rate: number, total: number): number {
   return Math.min(total, Math.max(0, cur + Math.max(0, elapsed) * rate));
 }

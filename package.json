@@ -8,9 +8,9 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5196 --strictPort",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && npm run check:content && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5197",
-    "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test && npm run check:content",
     "test:e2e": "node scripts/verify.mjs",
     "capture": "node scripts/verify.mjs --capture",
     "typecheck": "tsc --noEmit",
@@ -18,7 +18,8 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "node --test src/domain/*.test.ts"
+    "test": "node --test src/domain/*.test.ts",
+    "check:content": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",

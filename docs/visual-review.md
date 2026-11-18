@@ -1,6 +1,6 @@
 # 예제 차시 시각 검토
 
-검토일: 2026-11-18. 대상은 `/Users/hoetaekpro/work/lesson-template`의 ‘시간과 거리’ 예제다. 다른 저장소의 기존 판정을 재사용하지 않았다.
+검토일: 2026-11-18. 대상은 `.`의 ‘시간과 거리’ 예제다. 다른 저장소의 기존 판정을 재사용하지 않았다.
 
 제작자와 별도로 `AGENTS.md`, `.agents/skills/slide-create/SKILL.md`, `.agents/skills/slide-principles/SKILL.md`, `docs/authoring.md`를 읽었다. `.local/captures/verification.json`의 `images`에 있는 실제 PNG 21개를 각각 직접 열고 본문·도식·자막·조작 문구·퀴즈 해설을 읽었다.
 

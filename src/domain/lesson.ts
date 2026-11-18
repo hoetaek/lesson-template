@@ -40,6 +40,7 @@ export function validateLesson(lesson: Lesson): string[] {
       ids.add(item.id);
     }
   };
+  unique([lesson], "차시");
   unique(lesson.activities, lesson.id);
   for (const activity of lesson.activities) {
     unique(activity.slides, activity.id);

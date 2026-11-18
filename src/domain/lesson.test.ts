@@ -25,8 +25,10 @@ const lesson: Lesson = {
 test("화면 주소가 충돌하는 중복 ID와 없는 출처를 검출한다", () => {
   assert.deepEqual(validateLesson(lesson), []);
   const bad = structuredClone(lesson);
+  bad.id = "Invalid Lesson";
   bad.activities[0].slides[0].sources = ["missing"];
   bad.activities[0].slides = [...bad.activities[0].slides, bad.activities[0].slides[0]];
   assert.match(validateLesson(bad).join("\n"), /중복 ID intro/);
   assert.match(validateLesson(bad).join("\n"), /없는 출처/);
+  assert.match(validateLesson(bad).join("\n"), /잘못된 ID Invalid Lesson/);
 });

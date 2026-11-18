@@ -268,10 +268,7 @@ export default function Player({ lesson }: { lesson: Lesson }) {
           {!presentation && (
             <>
               <div className="flex h-13 items-center justify-between border-b border-line bg-surface px-3 lg:hidden">
-                <Link to={firstPath} aria-label="처음으로">
-                  ←
-                </Link>
-                <span className="text-sm font-bold text-navy">{seen?.activity.title}</span>
+                <span className="pl-2 text-sm font-bold text-navy">{seen?.activity.title}</span>
                 <Button
                   tone="quiet"
                   aria-label={open ? "차례 접기" : "차례 펼치기"}
@@ -297,17 +294,9 @@ export default function Player({ lesson }: { lesson: Lesson }) {
                 <div
                   className={`mb-2 flex items-center ${open ? "justify-between gap-1" : "flex-col gap-1"}`}
                 >
-                  <Link
-                    to={firstPath}
-                    className="grid size-8 shrink-0 place-items-center rounded-lg font-bold text-navy hover:bg-band"
-                    aria-label="처음으로"
-                    title="처음으로"
-                  >
-                    ←
-                  </Link>
                   {open && (
                     <span
-                      className="min-w-0 flex-1 truncate text-sm font-bold text-navy"
+                      className="min-w-0 flex-1 truncate pl-2 text-sm font-bold text-navy"
                       title={lesson.title}
                     >
                       {lesson.title}

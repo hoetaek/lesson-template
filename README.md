@@ -59,3 +59,7 @@ npm run capture      # 화면 검사와 이미지 저장
 답과 이어보기 위치는 해당 브라우저에만 저장한다. 학생 응답 수집·성적 관리·원격 제어는 없다. 낭독 생성·PDF 내보내기·Python 실행기도 포함하지 않는다.
 
 [UI와 개발 설정](docs/ui-and-tooling.md), [구조와 선택](docs/architecture.md), [검증 기록](docs/verification.md)을 참고한다. 복사해 만든 차시는 독립 저장소이므로 이후 변경이 자동으로 동기화되지는 않는다.
+
+## 라이선스
+
+[MIT](LICENSE). 자유롭게 쓰고, 고치고, 나눌 수 있다.
